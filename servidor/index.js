@@ -5,6 +5,8 @@ const cors = require('cors')
 // Creamos el servidor
 const app = express()
 
+
+
 // Conectamos a la Base de Datos
 conectarDB();
 app.use(cors())
