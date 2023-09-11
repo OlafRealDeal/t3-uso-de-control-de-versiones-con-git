@@ -20,5 +20,5 @@ app.use(express.json())
 app.use('/api/products', require('./routes/product'))
 
 app.listen(4000, () => {
-    console.log('El servidor esta corriendo correctamente');
+    console.log('Server is running properly');
 })
