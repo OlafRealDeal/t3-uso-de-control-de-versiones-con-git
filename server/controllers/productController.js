@@ -50,7 +50,7 @@ exports.actualizarProducto = async ( req, res ) => {
     } catch (error) {
         
         console.log(error);
-        res.status(500).send('Hubo un error');
+        res.status(500).send('Se ha encontrado un error');
     
     }
 }
@@ -68,7 +68,7 @@ exports.obtenerProducto = async ( req, res ) => {
     } catch (error) {
         
         console.log(error);
-        res.status(500).send('Hubo un error');
+        res.status(500).send('Se ha encontrado un error');
     
     }
 }
