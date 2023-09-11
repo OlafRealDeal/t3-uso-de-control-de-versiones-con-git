@@ -15,7 +15,7 @@ exports.crearProducto = async ( req, res ) => {
 
     } catch (error) {
         console.log(error);
-        res.status(500).send('Hubo un error');
+        res.status(500).send('Se ha encontrado un error');
     }
 
 }
@@ -26,7 +26,7 @@ exports.obtenerProductos = async ( req, res ) => {
         res.json(productos);
     } catch (error) {     
         console.log(error);
-        res.status(500).send('Hubo un error');  
+        res.status(500).send('Se ha encontrado un error');  
     }
 }
 
