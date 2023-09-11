@@ -1,0 +1,13 @@
+FROM node:14 AS client
+
+WORKDIR /usr/src/app/client
+
+COPY client/package*.json ./
+RUN npm install
+COPY client/ ./
+RUN npm run build --prod
+
+FROM nginx:alpine
+
+COPY --from=client /usr/src/app/client/dist/cliente /usr/share/nginx/html
+

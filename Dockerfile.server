@@ -1,0 +1,12 @@
+FROM node:14 AS server
+
+WORKDIR /usr/src/app/server
+
+COPY server/package*.json ./
+RUN npm install
+COPY server/ ./
+ENV MONGODB_URI="mongodb+srv://alvaro:alvaro123@cluster0.xysxorr.mongodb.net/meanproducts"
+
+EXPOSE 4000
+
+CMD ["node", "index.js"]

@@ -5,7 +5,11 @@ const cors = require('cors')
 // Creamos el servidor
 const app = express()
 
-
+app.use((req, res, next) => {
+    res.setHeader('Content-Security-Policy', "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval';");
+    next();
+  });
+  
 
 // Conectamos a la Base de Datos
 conectarDB();
